@@ -3,13 +3,14 @@ class UI {
         const output = document.querySelector('.output');
         const line = document.createElement('ul');
         line.style.listStyle = 'none';
+        line.className = 'd-flex flex-row';
 
         line.innerHTML = `
-                <li class="mb-1">User name: ${user.name}</li>
-                <li class="mb-1">User Zipcode: ${user.zip}</li>
-                <li class="mb-1">User email: ${user.email}</li>
-                <li class="mb-1">User phone number: ${user.phone}</li>
-                <li class="mb-1"><button class="btn btn-primary mb-3 btn-delete">Delete User</button></li>
+                <li class="mb-1 p-2"><h6 class="float-left mr-3">User name: </h6><span>${user.name}</span></li>
+                <li class="mb-1 p-2"><h6 class="float-left mr-3">User Zipcode: </h6><span>${user.zip}</span></li>
+                <li class="mb-1 p-2"><h6 class="float-left mr-3">User email: </h6><span>${user.email}</span></li>
+                <li class="mb-1 p-2"><h6 class="float-left mr-3">User phone number: </h6><span>${user.phone}</span></li>
+                <li class="mb-1 p-2"><button class="btn btn-primary mb-3 btn-delete">Delete User</button></li>
         `;
 
         output.appendChild(line);
