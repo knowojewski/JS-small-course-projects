@@ -20,12 +20,38 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000000b7), to(#000000)), url("../images/bg.jpg");
+  background-image: linear-gradient(to bottom, #000000b7, #000000), url("../images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: 'Noto Serif JP', serif;
+  color: #f2f2f2;
+}
+
+.heading {
+  text-align: center;
+  width: 800px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d1129), to(#01051f));
+  background: linear-gradient(to bottom, #0d1129, #01051f);
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 45px 5px #000000;
+          box-shadow: 0 0 45px 5px #000000;
 }
 
 h1 {
   font-family: sans-serif;
+  font-size: 60px;
+}
+
+h2 {
+  font-weight: 400;
   font-size: 40px;
-  margin-bottom: 50px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 20px 0;
 }
 
 .game-board {
@@ -40,9 +66,13 @@ h1 {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: 1px solid black;
   width: 445px;
   height: 480px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.718)), to(rgba(0, 0, 0, 0.718))), url(../images/boardBg.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.718), rgba(0, 0, 0, 0.718)), url(../images/boardBg.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
 }
 
 .card-container {
@@ -53,9 +83,6 @@ h1 {
 }
 
 .card-container .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   width: 100%;
   height: 100%;
@@ -95,6 +122,13 @@ h1 {
   background-color: #ff6f2d;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.card-container .card .back img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .rotate .card {

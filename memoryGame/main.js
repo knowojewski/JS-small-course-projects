@@ -75,10 +75,7 @@ function rotateBlock(event) {
     cardArr.push(this);
     if(cardArr.length === 2) {
         checkIfMatches(cardArr);
-    } else if(cardArr.length > 2) {
-        console.log('More than 2')
     }
-
 };
 
 
